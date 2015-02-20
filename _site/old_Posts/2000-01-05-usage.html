@@ -1,0 +1,77 @@
+<p>Alright, you’ve got a clean copy and are ready to push some schmancy pages for the world to ogle at.</p>
+
+<ul>
+  <li>Edit <code>_config.yml</code> to change your title, keywords, and description.</li>
+  <li>Create a new file in <code>_posts/</code> called <code>2014-01-01-intro.md</code>
+Edit it, and add:</li>
+</ul>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-text" data-lang="text">1
+2
+3
+4
+5
+6
+7
+8
+9</code></pre></div></td><td class="code"><div class="highlight"><pre>---
+title: &quot;home&quot;
+bg: white     #defined in _config.yml, can use html color like &#39;#010101&#39;
+color: black  #text color
+style: center
+---
+
+# Example headline!
+and so on..
+</pre></div>
+</td></tr></table>
+
+<ul>
+  <li>Create a second post called <code>2014-01-02-art.md</code> with an divider image this time:</li>
+</ul>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-text" data-lang="text">1
+2
+3
+4
+5
+6
+7
+8</code></pre></div></td><td class="code"><div class="highlight"><pre>---
+title: &quot;Art&quot;
+bg: turquoise  #defined in _config.yml, can use html color like &#39;#0fbfcf&#39;
+color: white   #text color
+fa-icon: paint-brush
+---
+
+#### A new section- oh the humanity!
+</pre></div>
+</td></tr></table>
+
+<p><strong>Note:</strong> That part <code>fa-icon: paint-brush</code> will use a font-awesome icon of <a href="http://fortawesome.github.io/Font-Awesome/icon/paint-brush/">paint-brush</a>. You can use any icon from this <a href="http://fortawesome.github.io/Font-Awesome/icons/">font-awesome icon directory</a>.</p>
+
+<ul>
+  <li>install Jekyll with <code>sudo gem install github-pages</code></li>
+  <li>run <code>jekyll serve -w</code>
+    <ul>
+      <li>visit <a href="http://localhost:4000">localhost:4000</a> to see a live locally served preview.</li>
+    </ul>
+  </li>
+  <li>Push changes and see them live!</li>
+</ul>
+
+<h2 style="margin-top:100px;" id="changing-your-colors"><strong>Changing your colors</strong></h2>
+
+<ul>
+  <li>In each post file you can define <code>bg: mycolor</code> and <code>color: myothercolor</code> to change the background and text colors for that section.</li>
+  <li><strong>mycolor</strong> can be a quoted html color like <code>'#0fbfcf'</code> or a key to a special color defined in <strong>_config.yml</strong> under ‘colors’.
+    <ul>
+      <li><strong>Note:</strong> Changes to _config.yml require a manual restart to your local server with <code>^C</code> and <code>jekyll serve -w</code>.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Nifty, right!</p>
+
+<h3 style="margin-top:100px;" id="also-see-readmemd-on-githubhttpsgithubcomt413singlepagedusage">Also see <strong>README.md</strong> <a href="https://github.com/t413/SinglePaged#usage"><em>on github!</em></a></h3>
+
