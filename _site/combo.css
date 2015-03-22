@@ -507,42 +507,82 @@ html { box-sizing: border-box; }
   
   
   
-  nav .p-register { border-color: #f8f8f8; }
-  #register { background-color: #f8f8f8 !important; color: #111111; }
-  #register a { color: #111111; }
-  #register .sectiondivider { color: #f8f8f8; }
+  nav .p-tools { border-color: #0fbfcf; }
+  #tools { background-color: #0fbfcf !important; color: #111111; }
+  #tools a { color: #111111; }
+  #tools .sectiondivider { color: #0fbfcf; }
 
   
   
   
-  nav .p-join { border-color: #fab125; }
-  #join { background-color: #fab125 !important; color: #111111; }
-  #join a { color: #111111; }
-  #join .sectiondivider { color: #fab125; }
+  nav .p-design { border-color: maroon; }
+  #design { background-color: maroon !important; color: #f8f8f8; }
+  #design a { color: #f8f8f8; }
+  #design .sectiondivider { color: maroon; }
+
+  
+  
+  
+  nav .p-ios { border-color: #111111; }
+  #ios { background-color: #111111 !important; color: #f8f8f8; }
+  #ios a { color: #f8f8f8; }
+  #ios .sectiondivider { color: #111111; }
+
+  
+  
+  
+  nav .p-web { border-color: #fab125; }
+  #web { background-color: #fab125 !important; color: #111111; }
+  #web a { color: #111111; }
+  #web .sectiondivider { color: #fab125; }
+
+  
+  
+  
+  nav .p-android { border-color: #9bcf2f; }
+  #android { background-color: #9bcf2f !important; color: #111111; }
+  #android a { color: #111111; }
+  #android .sectiondivider { color: #9bcf2f; }
+
+  
+  
+  
+  nav .p-register { border-color: #49a7e9; }
+  #register { background-color: #49a7e9 !important; color: #111111; }
+  #register a { color: #111111; }
+  #register .sectiondivider { color: #49a7e9; }
+
+  
+  
+  
+  nav .p-about { border-color: #fab125; }
+  #about { background-color: #fab125 !important; color: #111111; }
+  #about a { color: #111111; }
+  #about .sectiondivider { color: #fab125; }
 
   
   
   
   nav .p-team { border-color: #9bcf2f; }
-  #team { background-color: #9bcf2f !important; color: #f8f8f8; }
-  #team a { color: #f8f8f8; }
+  #team { background-color: #9bcf2f !important; color: #111111; }
+  #team a { color: #111111; }
   #team .sectiondivider { color: #9bcf2f; }
 
   
   
   
-  nav .p-art { border-color: #0fbfcf; }
-  #art { background-color: #0fbfcf !important; color: #f8f8f8; }
-  #art a { color: #f8f8f8; }
-  #art .sectiondivider { color: #0fbfcf; }
+  nav .p-develop { border-color: #0fbfcf; }
+  #develop { background-color: #0fbfcf !important; color: #f8f8f8; }
+  #develop a { color: #f8f8f8; }
+  #develop .sectiondivider { color: #0fbfcf; }
 
   
   
   
-  nav .p-intro { border-color: #f8f8f8; }
-  #intro { background-color: #f8f8f8 !important; color: #111111; }
-  #intro a { color: #111111; }
-  #intro .sectiondivider { color: #f8f8f8; }
+  nav .p-home { border-color: #f8f8f8; }
+  #home { background-color: #f8f8f8 !important; color: #111111; }
+  #home a { color: #111111; }
+  #home .sectiondivider { color: #f8f8f8; }
 
 
 
