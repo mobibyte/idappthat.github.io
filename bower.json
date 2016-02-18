@@ -17,6 +17,7 @@
     "bootstrap": "~3.3.5",
     "font-awesome": "~4.4.0",
     "angular-ui-router": "ui-router#^0.2.18",
-    "bootstrap-material-design": "^0.5.8"
+    "bootstrap-material-design": "^0.5.8",
+    "angularfire": "^1.1.3"
   }
 }

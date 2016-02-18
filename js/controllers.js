@@ -1,6 +1,6 @@
-var app = angular.module('app.controllers', []);
+var app = angular.module('app.controllers', ['firebase']);
 
-app.controller('HomeController', function($scope) {
+app.controller('HomeController', function($scope, $firebaseArray) {
   $scope.test = "hello";
   $scope.team = [
     {
@@ -39,4 +39,18 @@ app.controller('HomeController', function($scope) {
       image: 'core/avatar_nhat.png'
     },
   ];
+
+  var id = 1001024865;
+  var ref = new Firebase('https://mobi-internal.firebaseio.com/members');
+  ref.startAt("test").endAt("test").once('value', function(snap) {
+    console.log(snap.val());
+  })
+  console.log($firebaseArray(ref));
+
+
+  $scope.submitEmailForm = function() {
+    if($scope.emailForm.$valid) {
+      console.log($scope.emailForm);
+    }
+  }
 });
