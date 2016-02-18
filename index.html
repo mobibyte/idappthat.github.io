@@ -1,64 +1,145 @@
----
----
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html lang="en" ng-app="app">
 <head>
-  <meta charset="UTF-8" />
+  <!-- TODO: Meta Data -->
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ site.title }}</title>
-	<meta name="keywords" content="{{ site.keywords }}">
-	<meta name="description" content="{{ site.description }}">
-  <link rel="stylesheet" href="combo.css">
-  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-  {% if site.favicon %}<link rel="shortcut icon" href="{{ site.favicon }}" type="image/x-icon">{% endif %}
-	{% if site.touch_icon %}<link rel="apple-touch-icon" href="{{ site.touch_icon }}">{% endif %}
+  <title>Mobi</title>
+
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.min.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap-material-design/dist/css/ripples.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <div id="main">
+<body ng-controller="HomeController">
 
-    <nav><ul>
-      {% for node in site.posts reversed %}
-        {% capture id %}{{ node.id | remove:'/' | downcase }}{% endcapture %}
-        <li class="p-{{id}}"><a href="#{{id}}">{{node.title}}</a></li>
-      {% endfor %}
-    </ul></nav>
-
-
-    {% for page in site.posts reversed %}
-      {% capture id %}{{ page.id | remove:'/' | downcase }}{% endcapture %}
-      <div id="{{id}}" class="section p-{{id}}">
-        {% if page.icon %}
-        <div class="subtlecircle sectiondivider imaged">
-          <img src="{{page.icon}}" alt="section icon" />
-          <h5 class="icon-title">{{ page.title }}</h5>
-        </div>
-        {% elsif page.fa-icon %}
-        <div class="subtlecircle sectiondivider faicon">
-          <span class="fa-stack">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-{{ page.fa-icon }} fa-stack-1x"></i>
-          </span>
-          <h5 class="icon-title">{{ page.title }}</h5>
-        </div>
-        {% endif %}
-        <div class="container {{ page.style }}">
-          {{ page.content }}
-        </div>
+  <nav id="main-nav" class="navbar navbar-main navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <div class="navbar-brand">Mobi</div>
       </div>
-    {% endfor %}
 
-
-    <div id="footer" class="section text-white">
-      <div class="container">
-        {% capture foottext %} {% include footer.md %} {% endcapture %}
-        {{ foottext | markdownify }}
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">LEARN</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#" class="btn btn-raised btn-special">Member Login</a></li>
+        </ul>
       </div>
     </div>
-  </div>
+  </nav>
 
-{% include analytics.html %}
+  <section class="jumbotron main-cover">
+      <div class="logo-header"></div>
+      <div class="cover-links">
+        <a href="#mobi" class="btn btn-raised btn-info">What's Mobi?</a>
+        <a href="#register" class="btn btn-raised btn-info">How to Join</a>
+      </div>
+  </section>
+
+  <section>
+    <a name="mobi"></a>
+    <feature-box title="Android" image="core/feature_android_bg.jpg" icon="icons/feature_android.png" color="rgba(164,198,57,0.8)"></feature-box>
+    <feature-box title="iOS" image="core/feature_ios_bg.jpg" icon="icons/feature_ios.png" color="rgba(71,162,227,0.8)"></feature-box>
+    <feature-box title="Web" image="core/feature_web_bg.jpg" icon="icons/feature_web.png" color="rgba(231,76,60,0.7)"></feature-box>
+  </section>
+
+  <section class="container-fluid">
+    <div class="col-md-12">
+      <h3>What's Mobi?</h3>
+      <p>Mobi is a student organization that aims to engage its members in an active project based learning environment for mobile development while promoting scholastic excellence. We are an organization for developers, run by developers.
+      Entrepreneurial thinking is encouraged as Mobi explores the tools that start-ups are using to make the rapid development process possible in such a fast moving world. These objectives aim to harbor creativity and leadership skills in our members.</p>
+      <p>Students will be able to apply their knowledge in Programming, Algorithms, Databases, OS, Mobile Systems, Networks, Electrical Engineering, Mechanical Engineering, and Industrial and Graphical Design to their own projects that involve mobile development and product development.</p>
+    </div>
+  </section>
+
+  <section class="team">
+    <div class="team-box" ng-repeat="member in team" style="{{member.style}}">
+      <img class="img-circle" ng-src="images/{{member.image}}" alt="{{member.name}}">
+      <div class="team-name">{{member.name}}</div>
+      <div class="team-title">{{member.title}}</div>
+    </div>
+  </section>
+
+  <section class="container-fluid text-center pad">
+    <div class="col-md-6">
+      <h3>Mobi LEARN</h3>
+      <p>LEARN is Mobi's mobile app workshop program where anyone with any skill set can participate and learn how mobile apps are made! No matter what your skill level, you'll be able to take something away from each LEARN meeting that you can use in developing any mobile app. iOS, Android, and web development are are three ventures and you can choose whichever interests you. This year, we will be putting a huge emphasis on building native apps! (Android and iOS).</p>
+    </div>
+
+    <div class="col-md-6">
+      <h3>Social Coding</h3>
+      <p>Social Coding is for the slightly more advanced members but is open to anyone. This is generally after the LEARN meetings where we discuss app ideas to plan and build. Each task is broken down and assigned to each member ever week with various difficulties and categories so someone with no programming experience can join along. You can view a few of our projects at the bottom of this email.</p>
+
+      <a href="#" class="btn btn-raised btn-default">Mobi Projects</a>
+    </div>
+  </section>
+
+  <section class="container-fluid pad" style="background: #FBFBFB">
+    <a name="register"></a>
+    <form class="col-md-8 col-md-offset-2" id="register-form">
+      <h3 class="text-center">Register for MOBI Learn &amp; Email List</h3>
+
+      <div class="form-group col-md-6 col-sm-6">
+        <input type="text" class="form-control" placeholder="First name">
+      </div>
+
+      <div class="form-group col-md-6 col-sm-6">
+        <input type="text" class="form-control" placeholder="Last name">
+      </div>
+
+      <div class="form-group col-md-6 col-sm-6">
+        <input type="email" class="form-control" placeholder="Email">
+      </div>
+  
+      <div class="form-group col-md-6 col-sm-6">
+        <input type="number" class="form-control" placeholder="Mav's 1000 #">
+      </div>
+
+      <div class="col-md-12">
+        <input type="submit" value="Register" class="btn btn-raised btn-primary btn-block">
+      </div>
+
+    </form>
+  </section>
+
+  <section class="container-fluid map-bg pad">
+      <div class="col-md-4 col-sm-6 map-content pad-s">
+        <h4>Every Friday @ ERB 103</h4>
+        <div><strong>Mobi LEARN:</strong> 5pm - 6pm</div>
+        <div><strong>Social Coding:</strong> 6:15pm - Whenever</div>
+        <a href="#" class="btn btn-holo btn-block marg-top">Open in Maps</a>
+      </div>
+  </section>
+
+    
+  <footer class="footer-main container-fluid">
+    <div class="col-md-11">
+      Mobi Copyright &copy; 2016
+      <br><br>
+      uta.mobi@gmail.com
+    </div>
+    <div class="col-md-1 text-right">
+      <div class="logo-footer"></div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
+  <script type="text/javascript" src="bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
+
+  <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+  <script type="text/javascript" src="js/script.js"></script>
+
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/controllers.js"></script>
+  <script type="text/javascript" src="js/directives.js"></script>
 </body>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="site.js"></script>
 </html>

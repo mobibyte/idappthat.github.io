@@ -1,0 +1,241 @@
+body {
+  //font-family: 'Avenir';
+  background: #fff;
+}
+
+a {
+  color: #5A90B7;
+}
+
+a:hover {
+  color: #495058;
+}
+
+.btn-special {
+  background: #5A90B7;
+  color: #fff;
+  border-radius: 2px;
+}
+
+.btn-special:hover {
+  background: #4D7C9D;
+}
+
+.btn-holo {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff !important;
+  border-radius: 2px;
+}
+
+.logo-header {
+  width: 150px;
+  height: 150px;
+  background-image: url(../images/core/mobi_logo_white.png);
+  background-size: 100% 100%;
+  margin: 0 auto;
+}
+
+.logo-footer {
+  width: 75px;
+  height: 75px;
+  background-image: url(../images/core/mobi_logo_white.png);
+  background-size: 100% 100%;
+}
+
+.marg-top {
+  margin-top: 15px;
+}
+
+.pad {
+  padding: 25px;
+}
+
+.pad-s {
+  padding: 15px;
+}
+
+.no-pad { padding: 0;  }
+
+.footer-main {
+  color: #fff;
+  background: #495058;
+  padding: 10px;
+}
+
+/* Map */
+.map-bg {
+  position: relative;
+  background-image: url('https://api.mapbox.com/v4/mapbox.streets/pin-s-rocket+5A90B7(-97.113505,32.733358)/-97.113505,32.733458,14/1200x200@2x.png?access_token=pk.eyJ1IjoidXRhLW1vYmkiLCJhIjoiY2lrcWlhbDI1MDIyNXUwbTdic2V2YmswdyJ9.kr8yWDrGt6r1RUrBvp13DA');
+  background-position: center center;
+}
+
+.map-content {
+  border-radius: 3px;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+}
+
+.map-right {
+  padding: 20px;
+  text-align: center;
+}
+
+.map-right img {
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+/* Navbar */
+#main-nav {
+  transition: all 0.25s ease-in;
+}
+
+.navbar-main {
+  background: #495058;
+}
+/*
+
+.navbar-main .navbar-nav a {
+  font-size: 16px;
+  color: #fff;
+}
+
+.navbar-main .navbar-nav a:hover {
+  background: transparent;
+}
+
+.navbar-main .navbar-nav li:not(.special):hover {
+  background: #718898;
+}*/
+
+.navbar-main .navbar-nav a.btn-special {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin: 11px 10px 0 10px;
+  transition: all 0.15s ease-in;
+  background: #5A90B7;
+  border: 1px solid transparent;
+}
+
+.navbar-main .navbar-nav a.btn-special:hover {
+  border: 1px solid #fff;
+}
+
+.navbar-main .navbar-brand {
+  color: #fff;
+  font-size: 28px;
+  padding-top: 15px;
+}
+
+.navbar-trans {
+  background: transparent;
+  padding: 15px;
+}
+
+.navbar-trans .navbar-brand {
+  font-size: 32px;
+}
+
+.navbar-trans a {
+  font-size: 18px;
+}
+
+/*#main-nav a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 18px;
+  margin: 5px 5px 0 0;
+}
+
+#main-nav a:hover {
+  background: transparent;
+}
+
+#main-nav.navbar-trans {
+  background: rgba(0,0,0,0);
+}
+
+#main-nav.navbar-trans a:hover, #main-nav.navbar a:hover {
+  color: #5A90B7;
+}
+
+.navbar a:hover {
+  color: #495058;
+}
+
+.navbar a.btn-special {
+  color: #fff;
+}
+
+#main-nav.navbar-trans .navbar-brand, #main-nav.navbar-trans a {
+  color: #fff;
+}
+
+.navbar-brand {
+  font-size: 32px;
+  color: #495058;
+}*/
+
+/* Cover */
+.main-cover {
+  background: url('../images/core/cover_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0;
+  text-align: center;
+  padding-top: 120px;
+}
+
+.cover-links a {
+  margin: 30px 15px;
+}
+
+/* Team */
+section.team {
+  padding: 25px;
+  text-align: center;
+  background: url(../images/core/team_bg.jpg) no-repeat no-repeat;
+  background-size: cover;
+}
+
+.team-box {
+  display: inline-block;
+  text-align: center;
+  padding: 20px 6.5%;
+}
+
+.team-name {
+  margin-top: 5px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.team-title {
+  color: #858585;
+  font-size: 12px;
+}
+
+/* Feature box */
+.feature-box-wrapper { 
+  padding: 0; 
+  background-position: center;  
+  background-size: 100% auto;
+
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.feature-box {
+  text-align: center;
+  color: #fff;
+  padding: 25px 0 25px 0;
+}
+
+.feature-box-wrapper:hover {
+  background-size: 120% auto;
+}
