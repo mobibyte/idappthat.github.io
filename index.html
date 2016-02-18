@@ -16,7 +16,7 @@
 </head>
 <body ng-controller="HomeController">
 
-  <nav id="main-nav" class="navbar navbar-main navbar-fixed-top">
+  <nav id="main-nav" class="navbar navbar-main navbar-trans navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-warning-collapse">
@@ -44,7 +44,19 @@
             </ul>
           </li>
           <li><a href="#">Projects</a></li>
-          <li><a href="#">Pictures</a></li>
+          <li>
+            <a class="dropdown-toggle" data-toggle="dropdown">
+              Pictures
+              <b class="caret"></b>
+              <div class="ripple-container"></div>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li><a href="https://drive.google.com/folderview?id=0B9tlj8qK3eWqWG4zTDQ5WDBBZjg&usp=sharing" target="_blank">Mobi LEARN</a></li>
+              <li class="divider"></li>
+              <li><a href="https://drive.google.com/folderview?id=0B9tlj8qK3eWqM2NQQVMxdl9IWjA&usp=sharing" target="_blank">UTA Now</a></li>
+            </ul>
+          </li>
           <li><a href="#" class="btn btn-raised btn-special">Member Login</a></li>
         </ul>
       </div>
@@ -148,14 +160,16 @@
 
     
   <footer class="footer-main container-fluid">
-    <div class="col-md-11">
-      Mobi Copyright &copy; 2016
+    <div class="col-md-10">
+      500 UTA Blvd · Arlington, TX 76019 · USA<br>
+      <strong>Office:</strong> ERB #437
       <br>
       <a class="btn btn-raised btn-primary" href="mailto:uta.mobi@gmail.com"><i class="material-icons">email</i> uta.mobi@gmail.com</a>
 
     </div>
-    <div class="col-md-1 text-right">
+    <div class="col-md-2 text-center">
       <div class="logo-footer"></div>
+      Copyright &copy; 2016, Mobi
     </div>
   </footer>
 

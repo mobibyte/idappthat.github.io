@@ -46,6 +46,7 @@ p {
   height: 75px;
   background-image: url(../images/core/mobi_logo_white.png);
   background-size: 100% 100%;
+  margin: 0 auto;
 }
 
 .marg-top {
@@ -117,7 +118,7 @@ p {
 .navbar-main .navbar-nav a.btn-special {
   padding-top: 8px;
   padding-bottom: 8px;
-  margin: 6px 10px 0 10px;
+  margin: 11px 10px 0 10px;
   transition: all 0.15s ease-in;
   background: #5A90B7;
   border: 1px solid transparent;
@@ -130,7 +131,7 @@ p {
 .navbar-main .navbar-brand {
   color: #fff;
   font-size: 28px;
-  padding-top: 10px;
+  padding-top: 14px;
 }
 
 .navbar-trans {
