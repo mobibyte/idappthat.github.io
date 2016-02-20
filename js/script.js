@@ -15,3 +15,11 @@ function fixNav(scroll) {
     nav.addClass('navbar-trans');
   }
 }
+
+//thad: because css is dumb
+$('#bs-navbar').on('show.bs.collapse', function() {
+   $("#bs-navbar").css("background-color","#495058");
+})
+$('#bs-navbar').on('hidden.bs.collapse', function () {
+     $("#bs-navbar").css("background-color","");
+})
