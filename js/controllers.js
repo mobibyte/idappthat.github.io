@@ -42,9 +42,12 @@ app.controller('HomeController', function($scope, $firebaseArray) {
 
   var id = 1001024865;
   var ref = new Firebase('https://mobi-internal.firebaseio.com/members');
-  ref.startAt("test").endAt("test").once('value', function(snap) {
-    console.log(snap.val());
-  })
+  ref
+    .orderByChild('name')
+    .once('child_added', function(snapshot) {
+    console.log(snapshot);
+
+  });
   console.log($firebaseArray(ref));
 
 
@@ -53,4 +56,19 @@ app.controller('HomeController', function($scope, $firebaseArray) {
       console.log($scope.emailForm);
     }
   }
+});
+
+app.controller('PlaylistController', function($scope) {
+  $scope.playlists = [
+    {
+      image: 'http://thebigboss.org/wp-content/uploads/2014/ios_logo.png',
+      name: 'iOS',
+      link: 'kjlsdf'
+    },
+    {
+      image: 'http://famouslogos.net/images/android-logo.jpg',
+      name: 'Android',
+      link: 'kjlsdf'
+    }
+  ];
 });

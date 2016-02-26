@@ -1,0 +1,31 @@
+<style>
+  body{ 
+    background: #EEE; 
+    position: relative;
+  }
+
+  form { 
+    position: absolute;
+    top: 50%;
+    transform: translateY(50%);}
+</style>
+
+
+<form class="col-md-4 col-md-offset-4 panel panel-default">
+  <h1 class="text-center">Login</h1>
+  <p class="text-muted text-center">You must be a Mobi Member to login</p>
+
+  <div class="form-group label-floating">
+    <label class="control-label" for="email">Email</label>
+    <input class="form-control" id="email" type="email">
+  </div>
+
+  <div class="form-group label-floating">
+    <label class="control-label" for="password">Password</label>
+    <input class="form-control" id="password" type="password">
+  </div>
+
+  <input type="submit" value="Login" class="btn btn-primary btn-raised btn-block">
+  <a ui-sref="forgotpass" class="btn btn-default btn-block">Forgot Password?</a>
+
+</form>
