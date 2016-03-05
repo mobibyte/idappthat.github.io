@@ -1,6 +1,10 @@
 <div class="container-fluid">
-  <div class="col-md-4" ng-repeat="playlist in playlists">
-    <img ng-src="{{playlist.image}}" alt="">
-    {{playlist.name}}
+  <div class="col-md-3 playlist" ng-repeat="playlist in playlists">
+    <a ui-sref="portal.playlist({id: playlist.id})" class="thumbnail">
+      <img ng-src="{{playlist.image}}" alt="">
+      <div class="caption text-center">
+        <h3>{{playlist.title}}</h3>
+      </div>
+    </a>
   </div>
 </div>

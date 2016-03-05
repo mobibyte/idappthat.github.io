@@ -18,7 +18,8 @@
     "font-awesome": "~4.4.0",
     "angular-ui-router": "^0.2.18",
     "bootstrap-material-design": "^0.5.8",
-    "angularfire": "^1.1.3",
-    "angular-bootstrap": "^1.1.2"
+    "angular-bootstrap": "^1.1.2",
+    "parse": "^1.7.1",
+    "angular-sanitize": "^1.5.0"
   }
 }

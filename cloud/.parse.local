@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "Mobi Member Portal": {
+      "applicationId": "LfipsGfmXzaBABmd6ML0ypp3DRyZ5LOXDKWpyZoa"
+    },
+    "_default": {
+      "link": "Mobi Member Portal"
+    }
+  }
+}

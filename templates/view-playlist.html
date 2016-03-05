@@ -1,0 +1,9 @@
+<div class="container-fluid">
+  <h2 class="text-center">{{title}}</h2>
+  <p class="text-center" ng-bind-html="getDesc()">{{getDesc()}}</p>
+  <div ng-repeat="video in videos" class="col-md-6 col-md-offset-3 marg-top">
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe width="560" height="315" ng-src="{{ getSrc(video) }}" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>

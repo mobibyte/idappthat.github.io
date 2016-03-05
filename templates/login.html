@@ -11,18 +11,23 @@
 </style>
 
 
-<form class="col-md-4 col-md-offset-4 panel panel-default">
+<form class="col-md-4 col-md-offset-4 panel panel-default" ng-submit="submitLogin()">
   <h1 class="text-center">Login</h1>
   <p class="text-muted text-center">You must be a Mobi Member to login</p>
 
+  <div ng-if="message.text.length" class="alert alert-dismissible text-center" ng-class="message.error ? 'alert-danger' : 'alert-success'">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    {{ message.text }}
+  </div>
+
   <div class="form-group label-floating">
     <label class="control-label" for="email">Email</label>
-    <input class="form-control" id="email" type="email">
+    <input class="form-control" id="email" type="email" ng-model="loginForm.email" required>
   </div>
 
   <div class="form-group label-floating">
     <label class="control-label" for="password">Password</label>
-    <input class="form-control" id="password" type="password">
+    <input class="form-control" id="password" type="password" ng-model="loginForm.password" required>
   </div>
 
   <input type="submit" value="Login" class="btn btn-primary btn-raised btn-block">

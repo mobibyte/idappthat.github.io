@@ -69,6 +69,16 @@ p {
   padding: 10px;
 }
 
+/* Portal */
+.playlist img {
+  height: 150px;
+  background-size: 100% 100%;
+}
+
+.playlist a {
+  cursor: pointer;
+}
+
 /* Map */
 .map-bg {
   position: relative;
