@@ -126,7 +126,9 @@ app.controller('ViewPlaylistController', function($scope, $state, $stateParams, 
       $scope.videos = result.get('videos');
       $scope.$apply();
     }
-  })
+  });
+
+  ga('send', 'pageview', 'playlists');
 });
 
 app.controller('PlaylistController', function($scope) {
