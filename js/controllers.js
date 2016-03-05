@@ -1,7 +1,6 @@
 var app = angular.module('app.controllers', ['ngSanitize']);
 
 app.controller('HomeController', function($scope) {
-  $scope.test = "hello";
   $scope.team = [
     {
       name: 'Cameron Moreau',
