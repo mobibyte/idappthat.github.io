@@ -110,20 +110,6 @@ p {
 .navbar-main {
   background: #495058;
 }
-/*
-
-.navbar-main .navbar-nav a {
-  font-size: 16px;
-  color: #fff;
-}
-
-.navbar-main .navbar-nav a:hover {
-  background: transparent;
-}
-
-.navbar-main .navbar-nav li:not(.special):hover {
-  background: #718898;
-}*/
 
 .navbar-main .navbar-nav a.btn-special {
   padding-top: 8px;
@@ -149,6 +135,10 @@ p {
   padding: 15px;
 }
 
+.navbar-trans .collapse.in, .navbar-trans .collapsing {
+  background: #495058;
+}
+
 .navbar-trans .navbar-brand {
   font-size: 32px;
 }
@@ -156,42 +146,6 @@ p {
 .navbar-trans a {
   font-size: 18px;
 }
-
-/*#main-nav a {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-size: 18px;
-  margin: 5px 5px 0 0;
-}
-
-#main-nav a:hover {
-  background: transparent;
-}
-
-#main-nav.navbar-trans {
-  background: rgba(0,0,0,0);
-}
-
-#main-nav.navbar-trans a:hover, #main-nav.navbar a:hover {
-  color: #5A90B7;
-}
-
-.navbar a:hover {
-  color: #495058;
-}
-
-.navbar a.btn-special {
-  color: #fff;
-}
-
-#main-nav.navbar-trans .navbar-brand, #main-nav.navbar-trans a {
-  color: #fff;
-}
-
-.navbar-brand {
-  font-size: 32px;
-  color: #495058;
-}*/
 
 /* Cover */
 .main-cover {
