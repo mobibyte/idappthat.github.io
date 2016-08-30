@@ -1,6 +1,6 @@
 var app = angular.module('app.controllers', ['ngSanitize']);
 
-app.controller('HomeController', function($scope) {
+app.controller('HomeController', function($scope, $http) {
   $scope.team = [
     {
       name: 'Cameron Moreau',
@@ -39,9 +39,49 @@ app.controller('HomeController', function($scope) {
     },
   ];
 
+  $scope.subscribeMessage = null;
+  $scope.subscribeLoading = false;
+
   $scope.submitEmailForm = function() {
     if($scope.emailForm.$valid) {
-      console.log($scope.emailForm);
+      var u = '5d3eeb8a245375de29b010caa';
+      var id = '0a24065ed9';
+      var url = 'http://idappthat.us7.list-manage.com/subscribe/post-json?u=' + u + '&id=' + id + '&c=JSON_CALLBACK';
+      var data = {
+        'FNAME': $scope.emailForm.firstName,
+        'LNAME': $scope.emailForm.lastName,
+        'EMAIL': $scope.emailForm.email,
+        'MAVS': $scope.emailForm.mavsNumber,
+      }
+
+      $scope.subscribeLoading = true;
+      $http.jsonp(url, {params: data})
+        .success(function(response) {
+          console.log(response);
+          $scope.subscribeLoading = false;
+          $scope.subscribeMessage = {
+            type: response.result, message: response.msg
+          }
+        })
+        .error(function(response) {
+          $scope.subscribeMessage = {
+            type: 'error', message: 'Something went wrong...'
+          }
+        })
+
+      // $.ajax({
+      //   type: 'GET',
+      //   url: 'http://idappthat.us7.list-manage.com/subscribe/post-json?u=' + u + '&id=' + id + '&c=?',
+      //   data: $form.serialize(),
+      //   dataType: 'jsonp',
+      //   contentType: 'application/json; charset=utf-8',
+      //   error: function(err) { alertError('Could not register at this time...'); },
+      //   success: function(data) {
+      //     console.log(data);
+      //     if(data.result == 'error') alertError(data.msg);
+      //     else alertSuccess();
+      //   }
+      // });
     }
   }
 });
@@ -150,4 +190,3 @@ app.controller('PlaylistController', function($scope) {
     }
   });
 });
-

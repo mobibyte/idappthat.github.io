@@ -96,20 +96,25 @@
   <form class="col-md-8 col-md-offset-2" id="register-form" name="emailForm" ng-submit="submitEmailForm()" novalidate>
     <h3 class="text-center">Register for MOBI Learn &amp; Email List</h3>
 
+    <div ng-if="subscribeMessage" class="text-center">
+      <p class="{{ subscribeMessage.type === 'error' ? 'text-danger' : 'text-success' }}" ng-bind-html="subscribeMessage.message">
+      </p>
+    </div>
+
     <div class="col-md-6">
       <div class="form-group label-floating" ng-class="{ 'has-error' : emailForm.firstName.$invalid && !emailForm.firstName.$pristine }">
         <label class="control-label" for="firstName">First name</label>
         <input type="text" id="firstName" class="form-control" ng-model="emailForm.firstName" required>
       </div>
     </div>
-    
+
     <div class="col-md-6">
       <div class="form-group label-floating" ng-class="{ 'has-error' : emailForm.lastName.$invalid && !emailForm.lastName.$pristine }">
         <label class="control-label" for="lastName">Last name</label>
         <input type="text" id="lastName" class="form-control" ng-model="emailForm.lastName" required>
       </div>
     </div>
-  
+
     <div class="col-md-6">
       <div class="form-group label-floating" ng-class="{ 'has-error' : emailForm.email.$invalid && !emailForm.email.$pristine }">
         <label class="control-label" for="email">Email</label>
@@ -125,7 +130,7 @@
     </div>
 
     <div class="col-md-12">
-      <input type="submit" value="Register" class="btn btn-raised btn-primary btn-block" ng-disabled="emailForm.$invalid">
+      <input type="submit" value="Register" class="btn btn-raised btn-primary btn-block" ng-disabled="emailForm.$invalid || subscribeLoading">
     </div>
 
   </form>
@@ -140,7 +145,7 @@
   </div>
 </section>
 
-  
+
 <footer class="footer-main container-fluid">
   <div class="col-md-10">
     500 UTA Blvd · Arlington, TX 76019 · USA<br>
