@@ -2,8 +2,6 @@ var app = angular.module('app', [
   'ui.router', 'app.controllers', 'app.directives'
 ]);
 
-Parse.initialize("LfipsGfmXzaBABmd6ML0ypp3DRyZ5LOXDKWpyZoa", "59Pu5KJGwylNeZyaxmwp48oGOWvBJpATKriUiaNx");
-
 app.run(function($rootScope, $location, $window) {
   $window.ga('create', 'UA-74725436-1', 'auto');
   $rootScope.$on('$stateChangeSuccess', function (event) {
