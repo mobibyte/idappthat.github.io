@@ -34,8 +34,8 @@ p {
 }
 
 .logo-header {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   background-image: url(../images/core/mobi_logo_white.png);
   background-size: 100% 100%;
   margin: 0 auto;
@@ -108,7 +108,7 @@ p {
 }
 
 .navbar-main {
-  background: #495058;
+  background: #8c8c8c;
 }
 
 .navbar-main .navbar-nav a.btn-special {
@@ -166,7 +166,7 @@ p {
 section.team {
   padding: 25px;
   text-align: center;
-  background: url(../images/core/team_bg.jpg) no-repeat no-repeat;
+  background-color: #efefef;
   background-size: cover;
 }
 
@@ -209,3 +209,5 @@ section.team {
 .feature-box-wrapper:hover {
   background-size: 120% auto;
 }
+
+
