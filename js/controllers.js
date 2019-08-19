@@ -3,40 +3,20 @@ var app = angular.module('app.controllers', ['ngSanitize']);
 app.controller('HomeController', function($scope, $http) {
   $scope.team = [
     {
-      name: 'Cameron Moreau',
+      name: 'Mary Huerta',
       title: 'President',
-      image: 'core/avatar_cameron.png'
+      image: 'core/avatar_mary.png'
     },
     {
-      name: 'Kevin Chung',
+      name: 'Kolten Sturgill',
       title: 'Vice-President',
-      image: 'core/avatar_kevin.png'
+      image: 'core/avatar_kolten.png'
     },
     {
-      name: 'Anthony Tatowicz',
+      name: 'Cameron Moreau',
       title: 'Project Manager',
-      image: 'core/avatar_anthony.png'
-    },
-    {
-      name: 'John Jackson',
-      title: 'Executive Office',
-      image: 'core/avatar_john.png'
-    },
-    {
-      name: 'Reece Ajibola',
-      title: 'UI/UX Manager',
-      image: 'core/avatar_reece.png'
-    },
-    {
-      name: 'Zach Bracken',
-      title: 'Media Manager',
-      image: 'core/avatar_zach.png'
-    },
-    {
-      name: 'Nhat Dao',
-      title: 'Web Manager',
-      image: 'core/avatar_nhat.png'
-    },
+      image: 'core/avatar_cameron.png'
+    }
   ];
 
   $scope.subscribeMessage = null;
